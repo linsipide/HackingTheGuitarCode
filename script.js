@@ -113,7 +113,7 @@ let listeA = {
   'Fa# Dorien' : ["fa#", "sol#", "la", "si", "do#", "ré#", "mi",""],
   'Sol Dorien' : ["sol", "la", "la#", "do", "ré", "mi", "fa",""],
   'Sol# Dorien' : ["sol#", "la#", "si", "do#", "ré#", "fa", "fa#",""],
-  'La Dorien' : ["la", "si", "do", "ré", "mi", "fa", "sol",""],
+  'La Dorien' : ["la", "si", "do", "ré", "mi", "fa#", "sol",""],
   'La# Dorien' : ["la#", "do", "do#", "ré#", "fa", "sol", "sol#",""],
   'Si Dorien' : ["si", "do#", "ré", "mi", "fa#", "sol#", "la",""],
 
