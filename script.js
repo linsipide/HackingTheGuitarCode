@@ -94,7 +94,7 @@ let listeA = {
     'Si Blues Majeur' : ["si", "do#", "ré", "ré#", "fa#", "sol#",""],
 
     'Do Ionique (Majeure)' : ["do", "ré", "mi", "fa", "sol", "la", "si",""],
-    'Do# Ionique (Majeure)' : ["do#", "ré#", "mi#", "fa#", "sol#", "la#", "si#",""],
+    'Do# Ionique (Majeure)' : ["do#", "ré#", "fa", "fa#", "sol#", "la#", "si#",""],
     'Ré Ionique (Majeure)' : ["ré", "mi", "fa#", "sol", "la", "si", "do#",""],
     'Ré# Ionique (Majeure)' : ["ré#", "fa", "sol", "sol#", "la#", "si#", "ré",""],
     'Mi Ionique (Majeure)' : ["mi", "fa#", "sol#", "la", "si", "do#", "ré#",""],
@@ -170,12 +170,6 @@ let listeA = {
     ' La Locrienne' : ["la", "la#", "do", "ré", "ré#", "fa", "sol",""],
     ' La# Locrienne' : ["la#", "si", "do#", "ré#", "mi", "fa#", "sol#",""],
     ' Si Locrienne' : ["si", "do", "ré", "mi", "fa", "sol", "la",""],
-
-    'ré Ionien' : ['ré', 'mi', 'fa#', 'sol', 'la', "si", "do#", ""],
-    'ré# Ionien' : ['ré#', 'fa', 'sol', 'sol#', 'la#', "do", "ré", ""],
-    'sol# Ionien' : ['sol#', 'la#', 'do', 'do#', 'ré#', "fa", "sol", ""],
-
-    'sol# Mixolydien' : ['sol#', 'la#', 'do', 'do#', 'ré#', "fa", "fa#", ""],
 };
 
 
