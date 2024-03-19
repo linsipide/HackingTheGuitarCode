@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+</head>
+<body>
+  <canvas id="paper">
+        </canvas>
+    <div class="whole">
+      
+    <div class="intro">
+      Apprends les notes en improvisant :</br>Touche le manche de la guitare pour trouver des notes et cherche les gammes correspondantes !</br>
+      La première note que tu jouera sera la fondamentale de ta gamme.
+    
+    </div>
+    <div class="selectBox">
+    <form>
+    
+        
+      
+    <select class="select" onchange="onChange()" id="note0" disabled>
+        <option id="noneF" value="">I</option>
+        <option id="do" value="do">do / si#</option>
+        <option id="do#" value="do#">do# / ré♭</option>
+        <option id="ré" value="ré">ré</option>
+        <option id="ré#" value="ré#">ré# / mi♭</option>
+        <option id="mi" value="mi">mi / fa♭</option>
+        <option id="fa" value="fa">fa / mi#</option>
+        <option id="fa#" value="fa#">fa# / sol♭</option>
+        <option id="sol" value="sol">sol</option>
+        <option id="sol#" value="sol#">sol# / la♭</option>
+        <option id="la" value="la">la</option>
+        <option id="la#" value="la#">la# / si♭</option>
+        <option id="si" value="si">si / do♭</option>
+      </select>
+      <select class="select" onchange="allStuff()" id="note1"disabled>
+        <option value="" >II</option>
+        <option id="do" value="do">do / si#</option>
+        <option id="do#" value="do#">do# / ré♭</option>
+        <option id="ré" value="ré">ré</option>
+        <option id="ré#" value="ré#">ré# / mi♭</option>
+        <option id="mi" value="mi">mi / fa♭</option>
+        <option id="fa" value="fa">fa / mi#</option>
+        <option id="fa#" value="fa#">fa# / sol♭</option>
+        <option id="sol" value="sol">sol</option>
+        <option id="sol#" value="sol#">sol# / la♭</option>
+        <option id="la" value="la">la</option>
+        <option id="la#" value="la#">la# / si♭</option>
+        <option id="si" value="si">si / do♭</option>
+      </select>
+      <select class="select" onchange="allStuff()" id="note2"disabled >
+        <option value="" >III</option>
+        <option id="do" value="do">do / si#</option>
+        <option id="do#" value="do#">do# / ré♭</option>
+        <option id="ré" value="ré">ré</option>
+        <option id="ré#" value="ré#">ré# / mi♭</option>
+        <option id="mi" value="mi">mi / fa♭</option>
+        <option id="fa" value="fa">fa / mi#</option>
+        <option id="fa#" value="fa#">fa# / sol♭</option>
+        <option id="sol" value="sol">sol</option>
+        <option id="sol#" value="sol#">sol# / la♭</option>
+        <option id="la" value="la">la</option>
+        <option id="la#" value="la#">la# / si♭</option>
+        <option id="si" value="si">si / do♭</option>
+      </select>
+      <select class="select" onchange="allStuff()" id="note3"disabled>
+        <option value="">IV</option>
+        <option id="do" value="do">do / si#</option>
+        <option id="do#" value="do#">do# / ré♭</option>
+        <option id="ré" value="ré">ré</option>
+        <option id="ré#" value="ré#">ré# / mi♭</option>
+        <option id="mi" value="mi">mi / fa♭</option>
+        <option id="fa" value="fa">fa / mi#</option>
+        <option id="fa#" value="fa#">fa# / sol♭</option>
+        <option id="sol" value="sol">sol</option>
+        <option id="sol#" value="sol#">sol# / la♭</option>
+        <option id="la" value="la">la</option>
+        <option id="la#" value="la#">la# / si♭</option>
+        <option id="si" value="si">si / do♭</option>
+      </select>
+      <select class="select" onchange="allStuff()" id="note4"disabled>
+        <option value="" >V</option>
+        <option id="do" value="do">do / si#</option>
+        <option id="do#" value="do#">do# / ré♭</option>
+        <option id="ré" value="ré">ré</option>
+        <option id="ré#" value="ré#">ré# / mi♭</option>
+        <option id="mi" value="mi">mi / fa♭</option>
+        <option id="fa" value="fa">fa / mi#</option>
+        <option id="fa#" value="fa#">fa# / sol♭</option>
+        <option id="sol" value="sol">sol</option>
+        <option id="sol#" value="sol#">sol# / la♭</option>
+        <option id="la" value="la">la</option>
+        <option id="la#" value="la#">la# / si♭</option>
+        <option id="si" value="si">si / do♭</option>
+      </select>
+      <select class="select" onchange="allStuff()" id="note5"disabled>
+        <option value="">VI</option>
+        <option id="do" value="do">do / si#</option>
+        <option id="do#" value="do#">do# / ré♭</option>
+        <option id="ré" value="ré">ré</option>
+        <option id="ré#" value="ré#">ré# / mi♭</option>
+        <option id="mi" value="mi">mi / fa♭</option>
+        <option id="fa" value="fa">fa / mi#</option>
+        <option id="fa#" value="fa#">fa# / sol♭</option>
+        <option id="sol" value="sol">sol</option>
+        <option id="sol#" value="sol#">sol# / la♭</option>
+        <option id="la" value="la">la</option>
+        <option id="la#" value="la#">la# / si♭</option>
+        <option id="si" value="si">si / do♭</option>
+      </select>
+      <select class="select" onchange="allStuff()" id="note6"disabled>
+        <option value="">VII</option>
+        <option id="do" value="do">do / si#</option>
+        <option id="do#" value="do#">do# / ré♭</option>
+        <option id="ré" value="ré">ré</option>
+        <option id="ré#" value="ré#">ré# / mi♭</option>
+        <option id="mi" value="mi">mi / fa♭</option>
+        <option id="fa" value="fa">fa / mi#</option>
+        <option id="fa#" value="fa#">fa# / sol♭</option>
+        <option id="sol" value="sol">sol</option>
+        <option id="sol#" value="sol#">sol# / la♭</option>
+        <option id="la" value="la">la</option>
+        <option id="la#" value="la#">la# / si♭</option>
+        <option id="si" value="si">si / do♭</option>
+      </select>
+      <button type="button" class="buttonfirst" id="submitButton" >Gammes ?</button>
+      <button type="submit" class="buttonfirst" id="resetButton" >reset</button>
+    </form>
+    </div>
+      <div class="guitar">
+        <div class="string" id="eString">
+           <div class="roundedOne roundedTwo" id="mi">
+           
+            <input type="checkbox" id="n1" class="checkCase" onchange="allStuff()" value="mi"/>
+            <label for="n1" class="empty">mi</label>
+            </div>
+           
+           <div class="roundedOne" id="fa">
+           
+            <input type="checkbox" id="n2" class="checkCase" onchange="allStuff()" value="fa"/>
+            <label for="n2"class="marked">fa</label>
+            </div>
+           
+           <div class="roundedOne" id="fad">
+           
+            <input type="checkbox" id="n3" class="checkCase" onchange="allStuff()" value="fa#"/>
+            <label for="n3">fa#</label>
+            </div>
+           
+           <div class="roundedOne" id="sol">
+           
+            <input type="checkbox" id="n4" class="checkCase" onchange="allStuff()" value="sol"/>
+            <label for="n4"class="marked">sol</label>
+            </div>
+           
+           <div class="roundedOne" id="sold">
+           
+            <input type="checkbox" id="n5" class="checkCase" onchange="allStuff()" value="sol#"/>
+            <label for="n5">sol#</label>
+            </div>
+           
+           <div class="roundedOne" id="la">
+           
+            <input type="checkbox" id="n6" class="checkCase" onchange="allStuff()" value="la"/>
+            <label for="n6"class="marked">la</label>
+            </div>
+           
+           <div class="roundedOne" id="lad">
+            <input type="checkbox" id="n7" class="checkCase" onchange="allStuff()" value="la#"/>
+           <label for="n7">la#</label>
+            </div>
+           
+           <div class="roundedOne" id="si">
+            <input type="checkbox" id="n8" class="checkCase" onchange="allStuff()" value="si"/>
+           <label for="n8"class="marked">si</label>
+            </div>
+           
+           <div class="roundedOne" id="do">
+            <input type="checkbox" id="n9" class="checkCase" onchange="allStuff()" value="do"/>
+           <label for="n9">do</label>
+            </div>
+           
+           <div class="roundedOne" id="dod">
+            <input type="checkbox" id="n10" class="checkCase" onchange="allStuff()" value="do#"/>
+           <label for="n10"class="marked">do#</label>
+            </div>
+           
+           <div class="roundedOne" id="ré">
+            <input type="checkbox" id="n11" class="checkCase" onchange="allStuff()" value="ré"/>
+           <label for="n11">ré</label>
+            </div>
+           
+           <div class="roundedOne" id="réd">
+            <input type="checkbox" id="n12" class="checkCase" onchange="allStuff()" value="ré#"/>
+           <label for="n12">ré#</label>
+            </div>
+           
+        </div>
+        <div class="string" id="bString">
+           <div class="roundedOne roundedTwo" id="si">
+            <input type="checkbox" id="n13" class="checkCase" onchange="allStuff()" value="si"/>
+           <label for="n13" class="empty">si</label>
+            </div>
+           
+           <div class="roundedOne" id="do">
+            <input type="checkbox" id="n14" class="checkCase" onchange="allStuff()" value="do"/>
+           <label for="n14"class="marked">do</label>
+            </div>
+           
+           <div class="roundedOne" id="dod">
+            <input type="checkbox" id="n15" class="checkCase" onchange="allStuff()" value="do#"/>
+           <label for="n15">do#</label>
+            </div>
+           
+           <div class="roundedOne" id="ré">
+            <input type="checkbox" id="n16" class="checkCase" onchange="allStuff()" value="ré"/>
+           <label for="n16"class="marked">ré</label>
+            </div>
+           
+           <div class="roundedOne" id="réd">
+            <input type="checkbox" id="n17" class="checkCase" onchange="allStuff()" value="ré#"/>
+           <label for="n17">ré#</label>
+            </div>
+           
+           <div class="roundedOne" id="mi">
+            <input type="checkbox" id="n18" class="checkCase" onchange="allStuff()" value="mi"/>
+           <label for="n18"class="marked">mi</label>
+            </div>
+           
+           <div class="roundedOne" id="fa">
+            <input type="checkbox" id="n19" class="checkCase" onchange="allStuff()" value="fa"/>
+           <label for="n19">fa</label>
+            </div>
+           
+           <div class="roundedOne" id="fad">
+            <input type="checkbox" id="n20" class="checkCase" onchange="allStuff()" value="fa#"/>
+           <label for="n20"class="marked">fa#</label>
+            </div>
+           
+           <div class="roundedOne" id="sol">
+            <input type="checkbox" id="n21" class="checkCase" onchange="allStuff()" value="sol"/>
+           <label for="n21">sol</label>
+            </div>
+           
+           <div class="roundedOne" id="sold">
+            <input type="checkbox" id="n22" class="checkCase" onchange="allStuff()" value="sol#"/>
+           <label for="n22"class="marked">sol#</label>
+            </div>
+           
+           <div class="roundedOne" id="la">
+            <input type="checkbox" id="n23" class="checkCase" onchange="allStuff()" value="la"/>
+           <label for="n23">la</label>
+            </div>
+           
+           <div class="roundedOne" id="lad">
+            <input type="checkbox" id="n24" class="checkCase" onchange="allStuff()" value="la#"/>
+           <label for="n24">la#</label>
+            </div>
+           
+        </div>
+        <div class="string" id="gString">
+           <div class="roundedOne roundedTwo" id="sol">
+            <input type="checkbox" id="n25" class="checkCase" onchange="allStuff()" value="sol"/>
+           <label for="n25" class="empty">sol</label>
+            </div>
+           
+           <div class="roundedOne" id="sold">
+            <input type="checkbox" id="n26" class="checkCase" onchange="allStuff()" value="sol#"/>
+           <label for="n26"class="marked">sol#</label>
+            </div>
+           
+           <div class="roundedOne" id="la">
+            <input type="checkbox" id="n27" class="checkCase" onchange="allStuff()" value="la"/>
+           <label for="n27">la</label>
+            </div>
+           
+           <div class="roundedOne" id="lad">
+            <input type="checkbox" id="n28" class="checkCase" onchange="allStuff()" value="la#"/>
+           <label for="n28"class="marked">la#</label>
+            </div>
+           
+           <div class="roundedOne" id="si">
+            <input type="checkbox" id="n29" class="checkCase" onchange="allStuff()" value="si"/>
+           <label for="n29">si</label>
+            </div>
+           
+           <div class="roundedOne" id="do">
+            <input type="checkbox" id="n30" class="checkCase" onchange="allStuff()" value="do"/>
+           <label for="n30"class="marked">do</label>
+            </div>
+           
+           <div class="roundedOne" id="dod">
+            <input type="checkbox" id="n31" class="checkCase" onchange="allStuff()" value="do#"/>
+           <label for="n31">do#</label>
+            </div>
+           
+           <div class="roundedOne" id="ré">
+            <input type="checkbox" id="n32" class="checkCase" onchange="allStuff()" value="ré"/>
+           <label for="n32"class="marked">ré</label>
+            </div>
+           
+           <div class="roundedOne" id="réd">
+            <input type="checkbox" id="n33" class="checkCase" onchange="allStuff()" value="ré#"/>
+           <label for="n33">ré#</label>
+            </div>
+           
+           <div class="roundedOne" id="mi">
+            <input type="checkbox" id="n34" class="checkCase" onchange="allStuff()" value="mi"/>
+           <label for="n34"class="marked">mi</label>
+            </div>
+           
+           <div class="roundedOne" id="fa">
+            <input type="checkbox" id="n35" class="checkCase" onchange="allStuff()" value="fa"/>
+           <label for="n35">fa</label>
+            </div>
+           
+           <div class="roundedOne" id="fad">
+            <input type="checkbox" id="n36" class="checkCase" onchange="allStuff()" value="fa#"/>   
+           <label for="n36">fa#</label>      
+            </div>
+           
+        
+        </div>
+        <div class="string" id="dString">
+           <div class="roundedOne roundedTwo" id="ré">
+            <input type="checkbox" id="n37" class="checkCase" onchange="allStuff()" value="ré"/>
+           <label for="n37" class="empty">ré</label>
+            </div>
+           
+           <div class="roundedOne" id="réd">
+            <input type="checkbox" id="n38" class="checkCase" onchange="allStuff()" value="ré#"/>
+           <label for="n38"class="marked">ré#</label>
+            </div>
+           
+           <div class="roundedOne" id="mi">
+            <input type="checkbox" id="n39" class="checkCase" onchange="allStuff()" value="mi"/>
+           <label for="n39">mi</label>
+            </div>
+           
+           <div class="roundedOne" id="fa">
+            <input type="checkbox" id="n40" class="checkCase" onchange="allStuff()" value="fa"/>
+           <label for="n40"class="marked">fa</label>
+            </div>
+           
+           <div class="roundedOne" id="fad">
+            <input type="checkbox" id="n41" class="checkCase" onchange="allStuff()" value="fa#"/>
+           <label for="n41">fa#</label>
+            </div>
+           
+           <div class="roundedOne" id="sol">
+            <input type="checkbox" id="n42" class="checkCase" onchange="allStuff()" value="sol"/>
+           <label for="n42"class="marked">sol</label>
+            </div>
+           
+           <div class="roundedOne" id="sold">
+            <input type="checkbox" id="n43" class="checkCase" onchange="allStuff()" value="sol#"/>
+           <label for="n43">sol#</label>
+            </div>
+           
+           <div class="roundedOne" id="la">
+            <input type="checkbox" id="n44" class="checkCase" onchange="allStuff()" value="la"/>
+           <label for="n44"class="marked">la</label>
+            </div>
+           
+           <div class="roundedOne" id="lad">
+            <input type="checkbox" id="n45" class="checkCase" onchange="allStuff()" value="la#"/>
+           <label for="n45">la#</label>
+            </div>
+           
+           <div class="roundedOne" id="si">
+            <input type="checkbox" id="n46" class="checkCase" onchange="allStuff()" value="si"/>
+           <label for="n46"class="marked">si</label>
+            </div>
+           
+           <div class="roundedOne" id="do">
+            <input type="checkbox" id="n47" class="checkCase" onchange="allStuff()" value="do"/>
+           <label for="n47">do</label>
+            </div>
+           
+           <div class="roundedOne" id="dod">
+            <input type="checkbox" id="n48" class="checkCase" onchange="allStuff()" value="do#"/>
+           <label for="n48">do#</label>
+            </div>
+           
+        </div>
+        <div class="string" id="aString">
+           <div class="roundedOne roundedTwo" id="la">
+            <input type="checkbox" id="n49" class="checkCase" onchange="allStuff()" value="la"/>
+           <label for="n49"class="empty">la</label>
+            </div>
+           
+           <div class="roundedOne" id="lad">
+            <input type="checkbox" id="n50" class="checkCase" onchange="allStuff()" value="la#"/>
+           <label for="n50"class="marked">la#</label>
+            </div>
+           
+           <div class="roundedOne" id="si">
+            <input type="checkbox" id="n51" class="checkCase" onchange="allStuff()" value="si"/>
+           <label for="n51">si</label>
+            </div>
+           
+           <div class="roundedOne" id="do">
+            <input type="checkbox" id="n52" class="checkCase" onchange="allStuff()" value="do"/>
+           <label for="n52"class="marked">do</label>
+            </div>
+           
+           <div class="roundedOne" id="dod">
+            <input type="checkbox" id="n53" class="checkCase" onchange="allStuff()" value="do#"/>
+           <label for="n53">do#</label>
+            </div>
+           
+           <div class="roundedOne" id="ré">
+            <input type="checkbox" id="n54" class="checkCase" onchange="allStuff()" value="ré"/>
+           <label for="n54"class="marked">ré</label>
+            </div>
+           
+            <div class="roundedOne" id="réd">
+              <input type="checkbox" id="n55" class="checkCase" onchange="allStuff()" value="ré#"/>
+             <label for="n55">ré#</label>
+             </div>
+          
+           <div class="roundedOne" id="mi">
+            <input type="checkbox" id="n56" class="checkCase" onchange="allStuff()" value="mi"/>
+           <label for="n56"class="marked">mi</label>
+            </div>
+          
+           <div class="roundedOne" id="fa">
+            <input type="checkbox" id="n57" class="checkCase" onchange="allStuff()" value="fa"/>
+           <label for="n57">fa</label>
+            </div>
+           
+           <div class="roundedOne" id="fad">
+            <input type="checkbox" id="n58" class="checkCase" onchange="allStuff()" value="fa#"/>
+           <label for="n58"class="marked">fa#</label>
+            </div>
+           
+           <div class="roundedOne" id="sol">
+            <input type="checkbox" id="n59" class="checkCase" onchange="allStuff()" value="sol"/>
+           <label for="n59">sol</label>
+            </div>
+           
+           <div class="roundedOne" id="sold">
+            <input type="checkbox" id="n60" class="checkCase" onchange="allStuff()" value="sol#"/>
+           <label for="n60">sol#</label>
+            </div>
+           
+        </div>
+        <div class="string" id="EString">
+
+           <div class="roundedOne roundedTwo" id="mi">
+           <input type="checkbox" id="n61" class="checkCase" onchange="allStuff()" value="mi"/>
+           <label for="n61" class="empty">mi</label>
+           </div>
+ 
+          <div class="roundedOne" id="fa">
+          <input type="checkbox" id="n62" class="checkCase" onchange="allStuff()" value="fa"/>
+          <label for="n62"class="marked">fa</label>
+          </div>         
+           
+           <div class="roundedOne" id="fad"> 
+           <input type="checkbox" id="n63" class="checkCase" onchange="allStuff()" value="fa#"/>
+           <label for="n63">fa#</label>
+           </div>
+           
+           <div class="roundedOne" id="sol">
+           <input type="checkbox" id="n64" class="checkCase" onchange="allStuff()" value="sol"/>
+           <label for="n64"class="marked">sol</label>
+           </div>
+          
+           <div class="roundedOne" id="sold">
+            <input type="checkbox" id="n65" class="checkCase" onchange="allStuff()" value="sol#"/>
+           <label for="n65">sol#</label>
+            </div>
+           
+           <div class="roundedOne" id="la">
+            <input type="checkbox" id="n66" class="checkCase" onchange="allStuff()" value="la"/>
+           <label for="n66"class="marked">la</label>
+            </div>
+           
+           <div class="roundedOne" id="lad">
+            <input type="checkbox" id="n67" class="checkCase" onchange="allStuff()" value="la#"/>
+           <label for="n67">la#</label>
+            </div>
+           
+           <div class="roundedOne" id="si">
+            <input type="checkbox" id="n68" class="checkCase" onchange="allStuff()" value="si"/>
+           <label for="n68"class="marked">si</label>
+            </div>
+          
+           <div class="roundedOne" id="do">
+            <input type="checkbox" id="n69" class="checkCase" onchange="allStuff()" value="do"/>
+           <label for="n69">do</label>
+            </div>
+           
+           <div class="roundedOne" id="dod">
+            <input type="checkbox" id="n70" class="checkCase" onchange="allStuff()" value="do#"/>
+           <label for="n70"class="marked">do#</label>
+            </div>
+          
+           <div class="roundedOne" id="ré">
+            <input type="checkbox" id="n71" class="checkCase" onchange="allStuff()" value="ré"/>
+           <label for="n71">ré</label>
+            </div>
+           
+           <div class="roundedOne" id="réd">
+            <input type="checkbox" id="n72" class="checkCase" onchange="allStuff()" value="ré#"/>
+           <label for="n72">ré#</label>
+            </div>
+           
+        </div>
+        <div class="string0">
+          
+          <div class="rounded" id="mi">
+            </div>
+  
+           <div class="rounded" id="fa">
+           </div>         
+            
+            <div class="rounded" id="fad"> 
+            </div>
+            
+            <div class="rounded" id="sol">
+            </div>
+           
+            <div class="rounded" id="sold">
+             </div>
+            
+            <div class="rounded" id="la">
+             </div>
+            
+            <div class="rounded" id="lad">
+             </div>
+            
+            <div class="rounded" id="si">
+             </div>
+           
+            <div class="rounded" id="do">
+             </div>
+            
+            <div class="rounded" id="dod">
+             </div>
+           
+            <div class="rounded" id="ré">
+             </div>
+            
+            <div class="rounded" id="réd">
+             </div>
+       </div>
+       <div class="string1">
+          
+        <div class="rounded" id="mi">0
+          </div>
+
+         <div class="rounded" id="fa">1
+         </div>         
+          
+          <div class="rounded" id="fad"> 
+          </div>
+          
+          <div class="rounded" id="sol">3
+          </div>
+         
+          <div class="rounded" id="sold">
+           </div>
+          
+          <div class="rounded" id="la">5
+           </div>
+          
+          <div class="rounded" id="lad">
+           </div>
+          
+          <div class="rounded" id="si">7
+           </div>
+         
+          <div class="rounded" id="do">
+           </div>
+          
+          <div class="rounded" id="dod">9
+           </div>
+         
+          <div class="rounded" id="ré">
+           </div>
+          
+          <div class="rounded" id="réd">
+           </div>
+     </div>
+        
+          
+      </div>
+      <div class="gamme">
+        <div class="titre"> Trouve ta gamme !</div>
+        <div id="keyDisplay">
+          <button id="key0"></button>
+          <button id="key1"></button>
+          <button id="key2"></button>
+          <button id="key3"></button>
+          <button id="key4"></button>
+          <button id="key5"></button>
+          <button id="key6"></button>
+          <button id="key7"></button>
+          <button id="key8"></button>
+          <button id="key9"></button>
+          <button id="key10"></button>
+          <button id="key11"></button>
+          <button id="key12"></button>
+          
+    </div>
+  </div>
+</div>
+<script src="./script.js"></script>
+</body>
+</body>
+</html>
